@@ -1,3 +1,15 @@
+$(window).scroll(function(){
+
+    if($(this).scrollTop()>=200){
+        $("#navbar").addClass("noTransparrent");
+     }
+    else{
+        $("#navbar").removeClass("noTransparrent");
+     }
+
+});
+
+
 $(document).ready(function(){
     $('.circle').circleProgress({
         startAngle: -Math.PI / 2,

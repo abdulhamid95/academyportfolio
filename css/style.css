@@ -34,6 +34,26 @@ nav.navbar .navbar-nav li a.nav-link.active {
     background-color: #ffffff;
 }
 
+
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link {
+    color: #0575e6;
+}
+
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link:hover,
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link.active {
+    color: #ffffff;
+    background-color: #0575e6;
+}
+
+nav.navbar.noTransparrent {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+nav.navbar.noTransparrent button.navbar-toggler i {
+    color: #0575e6;
+}
+
 header.header .overlay {
     background-color: rgba(5, 117, 230, 0.8);
     color: #ffffff;
