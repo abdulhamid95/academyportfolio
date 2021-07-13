@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="asset/bootstrap-5.0.1-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="asset/dist/loading-bar.min.css">
     <link rel="stylesheet" href="asset/fontawesome-free-5.15.3-web/css/all.min.css">
     <title>صفحة هبوط شخصية</title>
 </head>
@@ -132,8 +133,7 @@
                   <div class="row">
                       <div class="col-sm-6 col-md-4 col-lg-2">
                         <div class="stat text-center">
-                            <div class="circle" data-value="0.75">
-                                <span></span>
+                            <div class="ldBar" data-preset="circle" data-value="75">
                             </div>
                             <p>
                                 HTML
@@ -142,8 +142,7 @@
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-2">
                         <div class="stat text-center">
-                            <div class="circle" data-value="0.5">
-                                <span></span>
+                            <div class="ldBar" data-preset="circle" data-value="50">
                             </div>
                             <p>
                                 CSS
@@ -152,8 +151,7 @@
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-2">
                         <div class="stat text-center">
-                            <div class="circle" data-value="0.5">
-                                <span></span>
+                            <div class="ldBar" data-preset="circle" data-value="50">
                             </div>
                             <p>
                                 Bootstrap
@@ -162,8 +160,7 @@
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-2">
                         <div class="stat text-center">
-                            <div class="circle" data-value="0.3">
-                                <span></span>
+                            <div class="ldBar" data-preset="circle" data-value="30">
                             </div>
                             <p>
                                 Javascript
@@ -172,8 +169,7 @@
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-2">
                         <div class="stat text-center">
-                            <div class="circle" data-value="0.75">
-                                <span></span>
+                            <div class="ldBar" data-preset="circle" data-value="75">
                             </div>
                             <p>
                                 PHP
@@ -182,8 +178,7 @@
                       </div>
                       <div class="col-sm-6 col-md-4 col-lg-2">
                         <div class="stat text-center">
-                            <div class="circle" data-value="0.5">
-                                <span></span>
+                            <div class="ldBar" data-preset="circle" data-value="50">
                             </div>
                             <p>
                                 MySql
@@ -400,17 +395,26 @@
                     </div>
                     <div class="row">
                         <div class="col-md-8">
-                            <form class="contact-form row">
+                            <form class="contact-form row needs-validation" novalidate>
                                 <div class="col-sm-6">
-                                    <input type="name" name="name" id="name" class="form-control" placeholder="الاسم">
+                                    <input type="name" class="form-control" placeholder="الاسم"  required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال الاسم
+                                      </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="البريد الالكتروني">
+                                    <input type="email" class="form-control" placeholder="البريد الالكتروني" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال البريد الالكتروني
+                                      </div>
                                 </div>
                                 <div class="col-sm-12">
-                                    <textarea name="description" id="description" class="form-control" placeholder="الرسالة"></textarea>
+                                    <textarea class="form-control" placeholder="الرسالة" required></textarea>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال رسالة
+                                      </div>
                                 </div>
-                                <button type="submit" name="submit" class="btn" value="Submit">
+                                <button type="submit" class="btn" value="Submit">
                                     ارسال
                                 </button>
                             </form>
@@ -454,8 +458,7 @@
         </div>
       </section>
       
-      <script src="asset/jquery/jquery.js"></script>
-      <script src="asset/jquery-circle-progress-1.2.2/dist/circle-progress.min.js"></script>
+      <script src="asset/dist/loading-bar.min.js"></script>
       <script src="asset/bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
       <script src="js/index.js"></script>
 </body>
