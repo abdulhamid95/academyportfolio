@@ -599,3 +599,53 @@ section.contacts .overlay .copyright p {
     line-height: 77px;
     margin: 0px;
 }
+<<<<<<< HEAD
+=======
+
+@media (max-width: 992px) {
+    section.licence ul.timeline::before {
+        height: 77%;
+    }
+
+    section.contacts .overlay .testimonials .slider {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    section.licence ul.timeline::before {
+        height: 85%;
+    }
+
+    section.contacts .overlay .testimonials .slider {
+        width: 100%;
+    }
+
+    section.licence ul.timeline li.timeboxes .timebox {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    section.licence ul.timeline li {
+        margin-bottom: 25px;
+    }
+
+    section.licence ul.timeline li.timeboxes .timebox::after{
+        content: none;
+    }
+
+    section.contacts .overlay .testimonials .slider .carousel .carousel-item {
+    min-height: 450px;
+    }
+
+    section.contacts .overlay .testimonials .slider .carousel .carousel-item .carousel-caption {
+        padding: 65px 35px 35px;
+    }
+
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev, 
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-next {
+        display: none;
+    }
+}
+>>>>>>> d844069701922177dcdfc8f87d2aa204b098aa20
