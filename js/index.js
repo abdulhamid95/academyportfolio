@@ -1,60 +1,38 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
+$(window).scroll(function(){
 
-  window.onscroll = function() {scrollFunction()};
+  // إضافة الصنف noTransparrent عند النزول بالصفحة إلى أكثر من 200 بيكسل
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      document.getElementById("navbar").classList.add("noTransparrent")
-    } else {
-      document.getElementById("navbar").classList.remove("noTransparrent")
-    }
-  }
-
-  $(window).scroll(function(){
-
-    if($(this).scrollTop()>=200){
-        $("#navBar").addClass("noTransparrent");
-     }
-    else{
-        $("#navBar").removeClass("noTransparrent");
-     }
+  if($(this).scrollTop()>=200){
+      $("#navbar").addClass("noTransparrent");
+   }
+  else{
+      $("#navbar").removeClass("noTransparrent");
+   }
 
 });
 
 $(document).ready(function(){
-    $("a.scroll").on('click', function(event) {
 
-        var hash = this.hash;
+    // سحب عملية الإنتقال في الصفحة 90 بيكسل عند الضغط على عناصر قائمة التنقل
+  $("a.nav-link").on('click', function(event) {
 
-        $('html, body').animate({ scrollTop: $(hash).offset().top - 90 }, 800, function(){});
-    
-    });
+      var hash = this.hash;
 
-    $('.circle').circleProgress({
-        startAngle: -Math.PI / 2,
-        fill: "#0575e6"
-    }).on('circle-animation-progress', function(event, progress, stepValue) {
-        $(this).find('span').html(Math.round(stepValue * 100) + '%');
-    });
+      $('html, body').animate({ scrollTop: $(hash).offset().top - 90 }, 200, function(){});
+  
+  });
+
+  // تعين دوائر النسب في الصفحة
+  $('.circle').circleProgress({
+      startAngle: -Math.PI / 2,
+      fill: "#0575e6"
+  }).on('circle-animation-progress', function(event, progress, stepValue) {
+      $(this).find('span').html(Math.round(stepValue * 100) + '%');
+  });
+  
+  // مكتبة التحقق
+  $(function () {
+      $("#commentForm").validate();
+  });
 
 });
-

@@ -490,7 +490,7 @@ section.contacts .overlay .contact-info .contact-form textarea {
     color: #c2c2c2;
     line-height: 35px;
     padding-right: 45px;
-    margin-bottom: 1rem;
+    margin-bottom: 0px;
     text-align: right;
 }
 
@@ -543,6 +543,11 @@ section.contacts .overlay .contact-info .contact-form button {
     max-width: 200px;
 }
 
+section.contacts form .error {
+    color: red;
+    margin-bottom: 1rem;
+}
+
 
 section.contacts .overlay .contact-info ul.contact-us li {
     font-family: 'Open Sans';
@@ -580,8 +585,7 @@ section.contacts .overlay .copyright p {
     line-height: 77px;
     margin: 0px;
 }
-<<<<<<< HEAD
-=======
+
 
 @media (max-width: 992px) {
     section.licence ul.timeline::before {
@@ -629,4 +633,3 @@ section.contacts .overlay .copyright p {
         display: none;
     }
 }
->>>>>>> d844069701922177dcdfc8f87d2aa204b098aa20
